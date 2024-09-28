@@ -17,10 +17,6 @@ jobs:
           curl --silent --location "https://github.com/keploy/keploy/releases/latest/download/keploy_linux_amd64.tar.gz" | tar xz --overwrite -C /tmp
           sudo mkdir -p /usr/local/bin && sudo mv /tmp/keploy /usr/local/bin/keploy
 
-  test:
-    needs: setup
-    runs-on: ubuntu-latest
-    steps:
       - name: Keploy Tests
         run: keploy test -app src/app.js -dir ./keploy
 
