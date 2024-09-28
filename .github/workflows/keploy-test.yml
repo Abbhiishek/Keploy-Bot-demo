@@ -1,9 +1,5 @@
 name: Keploy Test
-on:
-  workflow_call: # Trigger on workflow call
-  push:
-    branches:
-      - main
+on: workflow_dispatch
 
 jobs:
   setup:
